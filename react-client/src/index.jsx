@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import List from './components/List.jsx';
+import Addms from './components/Addms.jsx';
 
 class App extends React.Component {
   constructor(props) {
@@ -15,6 +16,7 @@ class App extends React.Component {
     $.ajax({
       url: '/items', 
       success: (data) => {
+        console.log(data)
         this.setState({
           items: data
         })
@@ -25,10 +27,39 @@ class App extends React.Component {
     });
   }
 
+
+
+  // addms (term) {
+  //   var that = this 
+  //   console.log(`${term} was searched`);
+  //  $.ajax({
+  //   type: "POST",
+  //   url: '/items',
+  //   data: {data:term},
+  //   success: function (xxx){
+  //     console.log(that.state.repos)
+  //     // that.setstate.repos= xxx
+  //       that.setState({
+  //         items:xxx
+  //       })
+  //     console.log( "after", that.state.repos)
+  //     } 
+  //  });
+
+  // console.log(`${term} was searched`);
+  // }
+
   render () {
-    return (<div>
+    return (<div className="MessageList"
+        ref={(div) => {
+          this.messageList = div;
+        }} >
       <h1>Item List</h1>
-      <List items={this.state.items}/>
+      
+      <List 
+      items={this.state.items}/>
+      <Addms  />
+     
     </div>)
   }
 }
