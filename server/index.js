@@ -9,23 +9,27 @@ var bodyParser = require('body-parser');
 var app = express();
 
 // UNCOMMENT FOR REACT
-// app.use(express.static(__dirname + '/../react-client/dist'));
+app.use(express.static(__dirname + '/../react-client/dist'));
 
 
-app.use(express.static(__dirname + '/../angular-client'));
-app.use(express.static(__dirname + '/../node_modules'));
+// app.use(express.static(__dirname + '/../angular-client'));
+// app.use(express.static(__dirname + '/../node_modules'));
 
 
+// var itemSchema = mongoose.Schema({
+//   name : Number,
+//   ms : String 
+// });
 
-app.post('/repos', function (req, res) {
+// app.post('/ms', function (req, res) {
 	
    
-helper.getReposByUsername(req.body.data , function (data) {
+// helper.getReposByUsername(req.body.data , function (data) {
 	
 
-res.send(data)
-  })
-});
+// res.send(data)
+//   })
+// });
 
 
 app.get('/items', function (req, res) {
