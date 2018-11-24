@@ -63,6 +63,10 @@ search () {
       <form>
       <button onClick={this.search}> send </button>
       </form>
+      <form>
+      <button > refresh </button>
+      </form>
+
     </div>) 
   }
 }
