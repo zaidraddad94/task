@@ -58,8 +58,8 @@ search () {
   render() {
     return (<div  >
       <h4>zzzzzzzz</h4>
-      Enter a github username: <input id="1" onChange={this.onChange}/>  
-      Enter a github massege: <input id="2" onChange={this.onChange}/>   
+       username: <input id="1" onChange={this.onChange}/>  
+       massege: <input id="2" onChange={this.onChange}/>   
       <form>
       <button onClick={this.search}> send </button>
       </form>

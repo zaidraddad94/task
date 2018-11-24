@@ -54,7 +54,7 @@ class App extends React.Component {
         ref={(div) => {
           this.messageList = div;
         }} >
-      <h1>Item List</h1>
+      <h1>Anonymous Chat</h1>
       
       <List 
       items={this.state.items}/>
