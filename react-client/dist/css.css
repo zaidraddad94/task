@@ -1,0 +1,105 @@
+#button {
+     background-color: #2c8fdf; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+
+ 	width: 75%;  
+    margin: 5px;
+}
+
+
+
+#button:hover  {
+     background-color: #f44336; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+}
+#zzz {
+    
+	background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+     margin: 10px;
+	width: 75%;  
+    }
+    #zzz:hover {
+    
+background-color: #f44336; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px;
+
+    }
+
+
+
+
+    #Addms {
+
+    	text-align: center;
+    	
+    	
+    }
+
+    #dd {
+    width: 30%; 
+    margin-bottom: : 50px;
+    padding: 10px;
+
+    }
+    #d {
+   width: 50%;
+
+    
+   
+    
+    padding: 25px;
+    margin: 25px;
+    }
+
+
+body {
+background-color: #e3e3e3
+}
+
+#app {
+
+background-color: white
+
+}
+
+#aaa {
+	text-transform: uppercase;
+}
+
+
+#hhh {
+    margin-top: -5px;
+    margin-left : 20px;
+    font-size: 18px;
+}
+
+

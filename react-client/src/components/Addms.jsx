@@ -1,4 +1,6 @@
 import React from 'react';
+import { Button } from 'react-bootstrap';
+import ReactDOM from 'react-dom';
 import $ from 'jquery';
 class Addms extends React.Component {
   constructor(props) {
@@ -16,12 +18,12 @@ class Addms extends React.Component {
     
     console.log("eeeee" , e.target.id)
 
-    if (e.target.id == 1){
+    if (e.target.id == "dd"){
 this.setState({
       name: e.target.value 
     });
 
-    }else if (e.target.id == 2){
+    }else if (e.target.id == "d"){
       this.setState({
       ms: e.target.value
     });
@@ -56,19 +58,23 @@ search () {
 
 
   render() {
-    return (<div  >
-      <h4>zzzzzzzz</h4>
-       username: <input id="1" onChange={this.onChange}/>  
-       massege: <input id="2" onChange={this.onChange}/>   
+    return (<div>
+      
+
+           <h4 id="aaa" >name : </h4><input  id="dd" onChange={this.onChange}/>  
+       <h3 id="aaa" >massege : </h3><input id="d" onChange={this.onChange}/>   
       <form>
-      <button onClick={this.search}> send </button>
-      </form>
-      <form>
-      <button > refresh </button>
+      <button id="zzz" onClick={this.search}>  send  </button></form><form><button id="button" > refresh </button>
+     
       </form>
 
-    </div>) 
+    </div>
+      
+    ) 
   }
 }
 
 export default Addms;
+
+
+ReactDOM.render(<Addms />, document.getElementById('Addms'));

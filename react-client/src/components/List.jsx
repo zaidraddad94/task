@@ -3,8 +3,8 @@ import ListItem from './ListItem.jsx';
 
 const List = (props) => (
   <div>
-    <h2> massges </h2>
-    There are { props.items.length } items.
+    
+    THERE AER { props.items.length } MASSEGES.
     { props.items.map(item => <ListItem item={item}/>)}
   </div>
 )

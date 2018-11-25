@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Button } from 'react-bootstrap';
 import $ from 'jquery';
 import List from './components/List.jsx';
 import Addms from './components/Addms.jsx';
@@ -50,15 +51,17 @@ class App extends React.Component {
   // }
 
   render () {
-    return (<div className="MessageList"
-        ref={(div) => {
-          this.messageList = div;
-        }} >
-      <h1>Anonymous Chat</h1>
+    return (<div>
       
-      <List 
+         
+
+    
+      <List  bsStyle="primary"
       items={this.state.items}/>
-      <Addms  />
+      
+    
+
+     
      
     </div>)
   }
