@@ -13,11 +13,11 @@ class Addms extends React.Component {
     this.onChange = this.onChange.bind(this)
     this.search = this.search.bind(this)
   }
-
+//this function to take value from the text bar and save it in side props so serch function can use the data in it to send poset requst to the data using ajax and it will be saved in data base 
   onChange (e) {
     
     console.log("eeeee" , e.target.id)
-
+// this if satment used  becose the is tow text pox and one function so each time this function calld we need to check wish text box calld hem using id \  
     if (e.target.id == "dd"){
 this.setState({
       name: e.target.value 
@@ -31,7 +31,7 @@ this.setState({
 
     console.log(this.state)
   }
-
+//this is the post function when we pris the poton he will take the data in prps and send it to the data pase 
 search () {
     var that = this 
     console.log("xxxxxxx",this.state.name );
@@ -43,10 +43,6 @@ search () {
           },
     success: function (xxx){
       console.log(xxx)
-      // that.setstate.repos= xxx
-        // that.setState({
-        //   repos:xxx
-        // })
       console.log( "after", that.state.repos)
       } 
    });

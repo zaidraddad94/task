@@ -30,26 +30,6 @@ class App extends React.Component {
 
 
 
-  // addms (term) {
-  //   var that = this 
-  //   console.log(`${term} was searched`);
-  //  $.ajax({
-  //   type: "POST",
-  //   url: '/items',
-  //   data: {data:term},
-  //   success: function (xxx){
-  //     console.log(that.state.repos)
-  //     // that.setstate.repos= xxx
-  //       that.setState({
-  //         items:xxx
-  //       })
-  //     console.log( "after", that.state.repos)
-  //     } 
-  //  });
-
-  // console.log(`${term} was searched`);
-  // }
-
   render () {
     return (<div>
       

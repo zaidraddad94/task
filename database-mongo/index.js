@@ -10,16 +10,17 @@ db.on('error', function() {
 db.once('open', function() {
   console.log('mongoose connected successfully');
 });
-
+//make schema
 var itemSchema =  mongoose.Schema({
   name : String,
   ms : String 
 });
 
 var Item = mongoose.model('Item', itemSchema);
-
+//save function  , i call it in post req to save the schema in the data base 
+//save takes 2 arguments  x is the data coming frome front end saved in schema obj 
 var save = function (x ,cb){
-console.log("lll" , cb )
+
 
   var item = new Item({
     name : x.name,
@@ -38,6 +39,7 @@ console.log("lll" , cb )
   })
 }
 
+// this function will be calde in the get fungtion to get all the data from the data base 
 var selectAll = function(callback) {
   Item.find({}, function(err, items) {
     if(err) {
