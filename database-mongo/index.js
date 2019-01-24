@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://zaid:zaid-1994@ds024778.mlab.com:24778/data');
+mongoose.connect('mongodb://zaid:zaid-1994@ds211635.mlab.com:11635/testt');
 
 var db = mongoose.connection;
 
@@ -13,35 +13,15 @@ db.once('open', function() {
 //make schema
 var itemSchema =  mongoose.Schema({
   name : String,
-  ms : String 
+  age : Number,
+  isCaptured : Boolean 
 });
 
-var Item = mongoose.model('Item', itemSchema);
-//save function  , i call it in post req to save the schema in the data base 
-//save takes 2 arguments  x is the data coming frome front end saved in schema obj 
-var save = function (x ,cb){
-
-
-  var item = new Item({
-    name : x.name,
-    ms : x.ms 
-  })
- 
-
-  item.save(function (err){
-    if (err){
-      console.log("errrrrrrrrro" , err)
-      //return handleError(err)
-    }else {
-      console.log("saaaavvvveeeed !!!")
-      cb("data base")
-    }
-  })
-}
+var items = mongoose.model('items', itemSchema);
 
 // this function will be calde in the get fungtion to get all the data from the data base 
 var selectAll = function(callback) {
-  Item.find({}, function(err, items) {
+  items.find({}, function(err, items) {
     if(err) {
       callback(err, null);
     } else {
@@ -52,4 +32,3 @@ var selectAll = function(callback) {
 
 module.exports.selectAll = selectAll;
 
-module.exports.save = save;

@@ -9,22 +9,28 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 
-// the post function 
-app.post('/items' , function (req,res){
-  db.save(req.body , function(test){
-    res.send(req.body)
-  })
-})
 
 // the get function 
 
-app.get('/items', function (req, res) {
+app.get('/pirates', function (req, res) {
   items.selectAll(function(err, data) {
-  	console.log( "dddddd" ,data )
+
+    
+//////////////this part to remove _id  from each object after getting the data from data base //////////////
+var newData = []
+for(var i = 0 ; i<data.length ; i++){
+newData.push({ name : data[i].name,
+  age : data[i].age,
+  isCaptured:data[i].isCaptured
+ })
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
     if(err) {
       res.sendStatus(500);
     } else {
-      res.json(data);
+      res.json(newData);
     }
   });
 });
