@@ -74,15 +74,15 @@ app.get('/pirates/countPirates',passport.authenticate('bearer', { session: false
     for(var i = 0 ; i<response.data.faces.length ; i++) {
       if (response.data.faces[i][0]== "8" || response.data.faces[i][0]== ";" ){
         if (response.data.faces[i][response.data.faces[i].length-1]== ")" || response.data.faces[i][response.data.faces[i].length-1]== "|"){
-          if (response.data.faces[i][1]== "-" || response.data.faces[i][1]== "~" || response.data.faces[i][1]== ")"|| response.data.faces[i][1]== "|" ){
+        //  if (response.data.faces[i][1]== "-" || response.data.faces[i][1]== "~" || response.data.faces[i][1]== ")"|| response.data.faces[i][1]== "|" ){
         arr.push(response.data.faces[i])
-          }
+         // }
         }
       }
     }
 
-res.json( {piratesFound : arr.length })
-    console.log(arr.length  );
+res.json({piratesFound:arr.length})
+    console.log(arr.length , arr  );
   })
   .catch(function (error) {
     console.log(error);
