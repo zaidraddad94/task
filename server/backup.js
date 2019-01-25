@@ -8,8 +8,10 @@ app.use(express.static(__dirname + '/../react-client/dist'));
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 var dbouth = require('../db/users');
+const jwt = require('jwt-simple');
+console.log( jwt.encode({ user:"adam" }, "secret"))
 
-var jwt = require('../jwt');
+
 ///////////////////////////////////////////
 
 var passport = require('passport');
@@ -59,7 +61,7 @@ newData.push({ name : data[i].name,
 
 
 
-app.get('/pirates/countPirates', jwt.validateUser, function (req, res) {
+app.get('/pirates/countPirates',passport.authenticate('bearer', { session: false }), function (req, res) {
  
   axios({
     method:'get',
