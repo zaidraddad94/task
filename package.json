@@ -11,6 +11,7 @@
     "axios": "^0.18.0",
     "body-parser": "^1.17.2",
     "express": "^4.15.0",
+    "jwt-simple": "^0.5.5",
     "mongoose": "^4.8.6",
     "nodemon": "^1.18.9",
     "passport": "^0.4.0",
