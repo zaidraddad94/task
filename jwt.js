@@ -1,3 +1,20 @@
+
+
+
+///////////////////////// this code is not used /////////////////////////
+
+// i use jwt cose the bot wase not accepting my token then i notest that i have to put Bearer befpr the token when i send it to the bot ////////////////  
+
+////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
 const jwt = require('jwt-simple');
 const secret = '13c72881661f2326f9097b8fdf26fe1c';
 
